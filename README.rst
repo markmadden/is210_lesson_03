@@ -266,12 +266,20 @@ The conditional ``if`` is a building block of any good language construct.
         ====== ===== ================
         Start  End   Status
         ====== ===== ================
-        --     90    Low
+        --     89    Low
         90     119   Ideal
         120    139   Warning
-        140    160   High
+        140    159   High
         160    --    Emergency
         ====== ===== ================
+
+    Example:
+
+    .. code:: console
+
+        $ python -i task_02.py
+        What is your blood pressure? 120
+        Your status is currently: Warning!
 
 .. hint::
 
@@ -323,11 +331,22 @@ can be used to provide branching for decision trees.
         Not White         Highlight    Spartan Sage
         ================= ============ =======================
 
+    Example:
+
+    .. code:: console
+
+        $ python -i task_03.py
+        Which base color, "Seattle Gray" or "Manatee"?: Manatee
+        Which accent color, "Platinum Mist" or "Spartan Sage"?: Spartan Sage
+        Which highlight color, "Fractal White" or "Not White": Not White
+        Your selected colors are, Manatee, Spartan Sage, and Not White.
+
 Task 04: Ternary Expressions
 ----------------------------
 
 When you need to perform a simple either/or assignment, a ternary expression
-can be a useful tool in your toolkit.
+can be a useful tool in your toolkit. Here, we'll build a simple alarm clock
+with snooze function.
 
 #.  Open a new file named ``task_04.py``
 
@@ -341,6 +360,10 @@ can be a useful tool in your toolkit.
     If the day is ``'sat'`` or ``'sun'`` or the user-submitted time is
     less-than ``600``, set ``SNOOZE`` to ``True``, otherwise set it to
     ``False``
+
+#.  Print an repeating alarm if ``SNOOZE`` is ``False``, eg::
+
+        Beep! Beep! Beep! Beep! Beep!
 
 .. hint::
 
@@ -392,9 +415,15 @@ operator can make for a powerful decision-making engine.
 
     #.  What is the amount of your principal (the amount being borrowed)?
 
+        - A whole integer
+
     #.  For how many years is this loan being borrowed?
 
+        - A whole integer
+
     #.  Are you pre-qualified for this loan?
+
+        -   Acceptable answers for this are 'Yes', 'y', 'No', and 'n'
 
     .. table:: Interest Rates
 
@@ -403,22 +432,25 @@ operator can make for a powerful decision-making engine.
         ===================== ============ ============== =============
         $0 - $199,999         1 - 15yrs    Yes            3.63%
         $0 - $199,999         1 - 15yrs    No             4.65%
-        $0 - $199,999         15 - 20yrs   Yes            4.04%
-        $0 - $199,999         15 - 20yrs   No             4.98%
-        $0 - $199,999         20 - 30yrs   Yes            5.77%
-        $0 - $199,999         20 - 30yrs   No             6.39%
+        $0 - $199,999         16 - 20yrs   Yes            4.04%
+        $0 - $199,999         16 - 20yrs   No             4.98%
+        $0 - $199,999         21 - 30yrs   Yes            5.77%
+        $0 - $199,999         21 - 30yrs   No             6.39%
         $200,000 - $999,999   1 - 15yrs    Yes            3.02%
         $200,000 - $999,999   1 - 15yrs    No             3.98%
-        $200,000 - $999,999   15 - 20yrs   Yes            3.27%
-        $200,000 - $999,999   15 - 20yrs   No             4.08%
-        $200,000 - $999,999   20 - 30yrs   Yes            4.66%
+        $200,000 - $999,999   16 - 20yrs   Yes            3.27%
+        $200,000 - $999,999   16 - 20yrs   No             4.08%
+        $200,000 - $999,999   21 - 30yrs   Yes            4.66%
         $1,000,000+           1 - 15yrs    Yes            2.05%
-        $1,000,000+           15 - 20yrs   Yes            2.62%
+        $1,000,000+           16 - 20yrs   Yes            2.62%
         ===================== ============ ============== =============
 
 #.  Using a series of nested ``if`` statements and comparison operators,
-    calculate the total amount owed and store the result in a variable named
-    ``TOTAL``.
+    calculate the total amount owed as an integer and store the result
+    in a variable named ``TOTAL``.
+
+    Assume that interest is compounded monthly (so *n = 12* in our above
+    equation).
 
 #.  Next, create a report for this user. The report should include the
     user's name and a summary of the relevant data and resemble the following::
@@ -429,7 +461,8 @@ operator can make for a powerful decision-making engine.
               Duration:             18yrs
               Pre-qualified?:         Yes
 
-              Total:             $263,858
+              Total:             $358,073
+
 
     Replacing the recipient's name, principal amount, duration,
     pre-qualification status, and total as instructed. Note the uses of
@@ -438,6 +471,24 @@ operator can make for a powerful decision-making engine.
 #.  Save the completed report to a variable named ``REPORT``.
 
 #.  Print the report.
+
+Example
+^^^^^^^
+
+.. code:: console
+
+    $ python -i task_05.py
+    What is your name? Marlowe Sizzles
+    What is the principal of the loan? 173254
+    For how long is this being borrowed? 18
+    Are you pre-qualified? Yes
+    Loan Report for: Marlowe Sizzles
+    --------------------------------------------------------------------
+          Principal:         $173,254
+          Duration:             18yrs
+          Pre-qualified?:         Yes
+
+          Total:             $358,073
 
 .. note::
 
