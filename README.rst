@@ -384,6 +384,16 @@ with snooze function.
     simple purposes here, it's enough. Not unlike ``Decimal()``, Python has
     special object types for dates and times.
 
+Example
+^^^^^^^
+
+.. code:: console
+
+    $ python -i task_04.py
+    What day is it?: Tues
+    What time is it?: 0813
+    Beep! Beep! Beep! Beep! Beep!
+
 Task 05: Compound Examples
 --------------------------
 
@@ -472,24 +482,6 @@ operator can make for a powerful decision-making engine.
 
 #.  Print the report.
 
-Example
-^^^^^^^
-
-.. code:: console
-
-    $ python -i task_05.py
-    What is your name? Marlowe Sizzles
-    What is the principal of the loan? 173254
-    For how long is this being borrowed? 18
-    Are you pre-qualified? Yes
-    Loan Report for: Marlowe Sizzles
-    --------------------------------------------------------------------
-          Principal:         $173,254
-          Duration:             18yrs
-          Pre-qualified?:         Yes
-
-          Total:             $358,073
-
 .. note::
 
     There are several gaps in the Interest Rates table for pre-qualification
@@ -523,6 +515,24 @@ Example
     consider just using the ``if`` to find the interest rate and set it into
     a variable. After the ``if`` block is complete, you can use the variable
     in your calculation.
+
+Example
+^^^^^^^
+
+.. code:: console
+
+    $ python -i task_05.py
+    What is your name? Marlowe Sizzles
+    What is the principal of the loan? 173254
+    For how long is this being borrowed? 18
+    Are you pre-qualified? Yes
+    Loan Report for: Marlowe Sizzles
+    --------------------------------------------------------------------
+          Principal:         $173,254
+          Duration:             18yrs
+          Pre-qualified?:         Yes
+
+          Total:             $358,073
 
 Submission
 ==========
