@@ -6,7 +6,7 @@ SYSTOLIC = int(raw_input('Type your numeric systolic blood pressure please: '))
 if SYSTOLIC < 90:
     BP_STATUS = "Low."
 elif SYSTOLIC < 120 and SYSTOLIC > 89:
-    BP_STATUS = "Ideal."
+    BP_STATUS = "ideal"
 elif SYSTOLIC < 140 and SYSTOLIC > 119:
     BP_STATUS = "Warning!"
 elif SYSTOLIC < 160 and SYSTOLIC > 139:
