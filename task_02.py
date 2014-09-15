@@ -10,7 +10,7 @@ elif SYSTOLIC < 120 and SYSTOLIC > 89:
 elif SYSTOLIC < 140 and SYSTOLIC > 119:
     BP_STATUS = "Warning!"
 elif SYSTOLIC < 160 and SYSTOLIC > 139:
-    BP_STATUS = "High."
+    BP_STATUS = "high"
 elif SYSTOLIC > 159:
     BP_STATUS = "Emergency."
 print "Your status is currently: {0}".format(BP_STATUS)
